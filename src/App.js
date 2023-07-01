@@ -23,6 +23,7 @@ const App = () => {
   useEffect(()=>{
     async function getData(){
       let res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${nameVal}`);
+
       setMove(res.data.moves.length);
       setId(res.data.id)
       setHeight(res.data.height)
